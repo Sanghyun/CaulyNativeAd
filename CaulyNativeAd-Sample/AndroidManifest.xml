@@ -5,7 +5,9 @@
 
     <uses-sdk
         android:minSdkVersion="7"
-        android:targetSdkVersion="7" />
+        android:targetSdkVersion="21" />
+
+    <supports-screens android:anyDensity="true" />
 
     <!-- Cauly : 광고 노출을 위한 필수 권한 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,23 +27,22 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.cauly.nativead.NativeListActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.NoBackground" >
         </activity>
         <activity
             android:name="com.cauly.nativead.NativeViewActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.NoBackground" >
         </activity>
         <activity
             android:name="com.cauly.nativead.NativeCardActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.NoBackground" >
         </activity>
         <activity
             android:name="com.cauly.nativead.EntryActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:theme="@style/Theme.NoBackground" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
