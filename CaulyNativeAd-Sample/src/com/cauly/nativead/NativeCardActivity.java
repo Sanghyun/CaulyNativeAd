@@ -22,6 +22,7 @@ import com.fsn.cauly.CaulyNativeAdView;
 import com.fsn.cauly.CaulyNativeAdViewListener;
 
 public class NativeCardActivity extends Activity implements CaulyNativeAdViewListener {
+	private static final String LOG_TAG = "NativeCardActivity";
 
 	String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	String[] TITLE = { "블루 & 그레이 톤의 북유럽 인테리어", "인더스트리얼 카페 Nomad 디자인", "닮고싶은 핀란드 아파트 인테리어 - 봄봄이와 하루님의 홈스타일", "맷돌순두부 by 잭슨카멜레온", "PAS쟁이x팀버랜드 이벤트" };
