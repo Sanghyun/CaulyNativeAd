@@ -1,6 +1,7 @@
 <resources>
- <string name="title">Hello world!</string>
-  <string name="menu_settings">Hello world!</string>
+
+    <string name="title">Hello world!</string>
+    <string name="menu_settings">Hello world!</string>
     <string name="app_name">CAULY NATIVEAD</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_java">QAJavaActivity</string>
@@ -10,8 +11,9 @@
     <string name="title_activity_xml">QAXMLActivity</string>
     <string name="switch_to_xml">To XML Activity</string>
     <string name="switch_to_java">To Java Activity</string>
-     <string name="title_activity_main">To Java Activity</string>
-	<string name="info_underline1"> 광고요청시 내려받을 <u>광고구성요소</u>를 선택하세요.</string>
-	<string name="info_underline2"> 카울리 SDK를 설치하시고 광고를 노출하고자 하는 <br/> <u>레이아웃을 자유롭게 구성 </u>하세요.</string>
-	<string name="info_underline3"> <u>광고를 요청</u>하시면 자연스러운 광고 컨텐츠가 <br/>노출됩니다.</string>
+    <string name="title_activity_main">To Java Activity</string>
+    <string name="info_underline1"> 광고요청시 내려받을 <u>광고구성요소</u>를 선택하세요.</string>
+    <string name="info_underline2"> 카울리 SDK를 설치하시고 광고를 노출하고자 하는 <br /> <u>레이아웃을 자유롭게 구성 </u>하세요.</string>
+    <string name="info_underline3"><u>광고를 요청</u>하시면 자연스러운 광고 컨텐츠가 <br />노출됩니다.</string>
+
 </resources>

@@ -49,6 +49,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".JavaActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/title_activity_java" >
+
+            <!-- orientation 변경 시 Activity 재시작 방지 -->
+        </activity>
+        <activity
+            android:name=".XMLActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/title_activity_xml" >
+
+            <!-- orientation 변경 시 Activity 재시작 방지 -->
+        </activity>
     </application>
 
 </manifest>
