@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-     android:background="#dedcd9"
+    android:background="#dedcd9"
     android:orientation="vertical" >
 
-    <ListView 
-         android:id="@+id/native_area"
+    <ListView
+        android:id="@+id/native_area"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginLeft="15dp"
-         android:layout_marginRight="15dp"
-         android:orientation="vertical" 
-         android:dividerHeight="8dp"
-         android:divider="@null"
-         android:background="#dedcd9"
-         android:animateLayoutChanges="false"
-         android:animationCache="false"
-         android:cacheColorHint="@android:color/transparent"
-        ></ListView>
+        android:layout_marginRight="15dp"
+        android:animateLayoutChanges="false"
+        android:animationCache="false"
+        android:background="#dedcd9"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:orientation="vertical" >
+    </ListView>
+
 </LinearLayout>

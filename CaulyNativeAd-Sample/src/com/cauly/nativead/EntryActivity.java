@@ -23,7 +23,7 @@ import com.fsn.cauly.CaulyInterstitialAdListener;
 public class EntryActivity extends Activity implements CaulyCloseAdListener, CaulyInterstitialAdListener {
 
 	ListView listview;
-	static final String[] type = { "네이티브 리스트뷰 타입", "네이티브 뷰타입", "네이티브 카드뷰 타입", "XML 타입", "JAVA 타입" };
+	static final String[] type = { "네이티브 리스트뷰 타입", "네이티브 뷰타입","네이티브 이미지 뷰타입", "네이티브 카드뷰 타입", "네이티브 카드이미지뷰 타입", "XML 타입", "JAVA 타입" };
 
 	private static final String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	private static final String LOG_TAG = "EntryActivity";
@@ -49,12 +49,18 @@ public class EntryActivity extends Activity implements CaulyCloseAdListener, Cau
 						startActivity(new Intent(EntryActivity.this, NativeViewActivity.class));
 						break;
 					case 2:
-						startActivity(new Intent(EntryActivity.this, NativeCardActivity.class));
+						startActivity(new Intent(EntryActivity.this, NativeViewImageOnlyActivity.class));
 						break;
 					case 3:
-						startActivity(new Intent(EntryActivity.this, XMLActivity.class));
+						startActivity(new Intent(EntryActivity.this, NativeCardActivity.class));
 						break;
 					case 4:
+						startActivity(new Intent(EntryActivity.this, NativeCardImageOnlyActivity.class));
+						break;
+					case 5:
+						startActivity(new Intent(EntryActivity.this, XMLActivity.class));
+						break;
+					case 6:
 						startActivity(new Intent(EntryActivity.this, JavaActivity.class));
 						break;
 

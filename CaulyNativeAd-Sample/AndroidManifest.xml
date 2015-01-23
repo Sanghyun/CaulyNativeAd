@@ -36,7 +36,17 @@
             android:theme="@style/Theme.NoBackground" >
         </activity>
         <activity
+            android:name="com.cauly.nativead.NativeViewImageOnlyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.NoBackground" >
+        </activity>
+        <activity
             android:name="com.cauly.nativead.NativeCardActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.NoBackground" >
+        </activity>
+        <activity
+            android:name="com.cauly.nativead.NativeCardImageOnlyActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.NoBackground" >
         </activity>
