@@ -24,7 +24,6 @@ import com.fsn.cauly.CaulyNativeAdViewListener;
 public class NativeCardActivity extends Activity implements CaulyNativeAdViewListener {
 	private static final String LOG_TAG = "NativeCardActivity";
 
-	String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	String[] TITLE = { "블루 & 그레이 톤의 북유럽 인테리어", "인더스트리얼 카페 Nomad 디자인", "닮고싶은 핀란드 아파트 인테리어 - 봄봄이와 하루님의 홈스타일", "맷돌순두부 by 잭슨카멜레온", "PAS쟁이x팀버랜드 이벤트" };
 
 	String[] SUBTITLE = { "Added by Bucketplace in Korean", "Added by allofthevintage in Korean ", "Added by hellohouse in Korean",
@@ -61,7 +60,7 @@ public class NativeCardActivity extends Activity implements CaulyNativeAdViewLis
 	// 네이티브 애드에 보여질 디자인을 정의하고 세팅하는 작업을 수행한다. (icon, image, title, subtitle, description ...)
 	// CaulyNativeAdViewListener 를 등록하여 onReceiveNativeAd or onFailedToReceiveNativeAd 로 네이티브광고의 상태를 전달받는다.
 	public void showNative() {
-		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(APP_CODE).layoutID(R.layout.activity_native_cardlistview) // 네이티브애드에 보여질 디자인을 작성하여 등록한다.
+		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(AppCode.getAppCode(this)).layoutID(R.layout.activity_native_cardlistview) // 네이티브애드에 보여질 디자인을 작성하여 등록한다.
 				.mainImageID(R.id.image)						// 메인 이미지 등록
 				.iconImageID(R.id.icon)							// 아이콘 등록
 				.titleID(R.id.title)							// 제목 등록

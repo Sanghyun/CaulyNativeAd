@@ -27,7 +27,6 @@ public class JavaActivity extends Activity implements CaulyAdViewListener {
 	}
 
 	// 광고 요청을 위한 App Code
-	private static final String APP_CODE = "vZxEr8bK";
 
 	private CaulyAdView javaAdView;
 
@@ -57,8 +56,7 @@ public class JavaActivity extends Activity implements CaulyAdViewListener {
 		//    	threadPriority(int priority)		: 광고 요청 스레드의 우선 순위. 기본값은 부모 스레드와 동일.
 		//    	bannerHeight(BannerHeight height)	: 배너 광고의 높이. CaulyAdInfo.BannerHeight.[Proportional(기본값, 디바이스 긴방향 해상도의 10%)|Fixed(48dp)]
 		//    	disableDefaultBannerA()	            : 광고 수신 실패 시 디폴트 배너 노출 막기. 
-		CaulyAdInfo adInfo = new CaulyAdInfoBuilder(APP_CODE).effect("RightSlide").disableDefaultBannerAd(). // 추가 시 카울리 광고 수신 실패 시에 노출되는  디폴트 배너 노출을 막을 수 있습니다.
-				build();
+		CaulyAdInfo adInfo = new CaulyAdInfoBuilder(AppCode.getAppCode(this)).effect("RightSlide").build();
 
 		// CaulyAdInfo를 이용, CaulyAdView 생성.
 		javaAdView = new CaulyAdView(this);

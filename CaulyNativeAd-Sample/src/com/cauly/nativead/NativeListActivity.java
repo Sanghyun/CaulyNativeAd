@@ -22,7 +22,6 @@ import com.fsn.cauly.CaulyAdInfo.Orientation;
 public class NativeListActivity extends Activity implements CaulyNativeAdViewListener {
 	private static final String LOG_TAG = "NativeListActivity";
 
-	String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	String[] TITLE = { "빈폴 2014 S/S시즌오프 UP TO 30%+10%...", "화제의 텀블러 리버스 보틀/전용파우치", "제이에스티나 외 쥬얼리& 시계 여름아이템 ~ 50% OFF",
 			"MACMOC 2014 Molling & Cushy Series", "애플 힙, 힙업을위한다면!", "꼭 한번 읽어봐야 할 책!", "네스카페 돌체구스토 피콜로&캡슐" };
 	String[] SUBTITLE = { "신세계몰 해피바이러스", "요즘 핫한 텀블러! 리버스보틀", "제이에스티나/스톤헨지/마크제이콥스/TISSOT 쥬얼리&시계 특가상품 + 추가쿠폰...", "신세계몰 해피바이러스 여성샌들/슬리퍼 ", "휴먼팩토리 애플힙",
@@ -52,7 +51,7 @@ public class NativeListActivity extends Activity implements CaulyNativeAdViewLis
 	// 네이티브 애드에 보여질 디자인을 정의하고 세팅하는 작업을 수행한다. (icon, image, title, subtitle, description ...)
 	// CaulyNativeAdViewListener 를 등록하여 onReceiveNativeAd or onFailedToReceiveNativeAd 로 네이티브광고의 상태를 전달받는다.
 	public void showNative() {
-		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(APP_CODE).layoutID(R.layout.activity_native_iconlist)    // 네이티브애드에 보여질 디자인을 작성하여 등록한다.
+		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(AppCode.getAppCode(this)).layoutID(R.layout.activity_native_iconlist)    // 네이티브애드에 보여질 디자인을 작성하여 등록한다.
 				.iconImageID(R.id.icon)							// 아이콘 등록
 				.titleID(R.id.title)							// 제목 등록
 				.subtitleID(R.id.subtitle)						// 부제목 등록

@@ -23,18 +23,17 @@ import com.fsn.cauly.CaulyInterstitialAdListener;
 public class EntryActivity extends Activity implements CaulyCloseAdListener, CaulyInterstitialAdListener {
 
 	ListView listview;
-	static final String[] type = { "네이티브 리스트뷰 타입", "네이티브 뷰타입","네이티브 이미지 뷰타입", "네이티브 카드뷰 타입", "네이티브 카드이미지뷰 타입", "XML 타입", "JAVA 타입" };
+	static final String[] type = { "네이티브 리스트뷰 타입", "네이티브 뷰타입", "네이티브 이미지 뷰타입", "네이티브 카드뷰 타입", "네이티브 카드이미지뷰 타입", "XML 타입", "JAVA 타입" };
 
-	private static final String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	private static final String LOG_TAG = "EntryActivity";
 	private CaulyCloseAd mCloseAd;
 	private CaulyInterstitialAd interstitialAd;
-	CaulyAdInfo mCaulyAdInfo = new CaulyAdInfoBuilder(APP_CODE).build();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
+		CaulyAdInfo mCaulyAdInfo = new CaulyAdInfoBuilder(AppCode.getAppCode(this)).build();
 		listview = (ListView) findViewById(R.id.native_area);
 		ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, type);
 		listview.setAdapter(myAdapter);
@@ -201,7 +200,7 @@ public class EntryActivity extends Activity implements CaulyCloseAdListener, Cau
 		Log.d(LOG_TAG, "onRequestInterstitial");
 		// 전면 광고 생성
 		interstitialAd = new CaulyInterstitialAd();
-		interstitialAd.setAdInfo(mCaulyAdInfo);
+		interstitialAd.setAdInfo(new CaulyAdInfoBuilder(AppCode.getAppCode(this)).build());
 		interstitialAd.setInterstialAdListener(this);
 
 		// 전면광고 노출 후 back 버튼을 막기를 원할 경우 disableBackKey();을 추가한다

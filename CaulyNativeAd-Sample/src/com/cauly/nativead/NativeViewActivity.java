@@ -12,7 +12,6 @@ import com.fsn.cauly.CaulyNativeAdViewListener;
 public class NativeViewActivity extends Activity implements CaulyNativeAdViewListener {
 	private static final String LOG_TAG = "NativeViewActivity";
 
-	String APP_CODE = "vZxEr8bK";// your app code which you are assigned.
 	ViewGroup native_container;
 
 	@Override
@@ -27,7 +26,7 @@ public class NativeViewActivity extends Activity implements CaulyNativeAdViewLis
 	// 네이티브 애드에 보여질 디자인을 정의하고 세팅하는 작업을 수행한다. (icon, image, title, subtitle, description ...)
 	// CaulyNativeAdViewListener 를 등록하여 onReceiveNativeAd or onFailedToReceiveNativeAd 로 네이티브광고의 상태를 전달받는다.
 	public void showNative() {
-		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(APP_CODE).layoutID(R.layout.activity_native_iconlist).iconImageID(R.id.icon)
+		CaulyAdInfo adInfo = new CaulyNativeAdInfoBuilder(AppCode.getAppCode(this)).layoutID(R.layout.activity_native_iconlist).iconImageID(R.id.icon)
 				.titleID(R.id.title).subtitleID(R.id.subtitle).build();
 		CaulyNativeAdView nativeAd = new CaulyNativeAdView(this);
 		nativeAd.setAdInfo(adInfo);
